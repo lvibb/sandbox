@@ -101,7 +101,7 @@ class LearningAgent(Agent):
         # Set the agent state and default action
         self.state = state
         self.next_waypoint = self.planner.next_waypoint()
-        action = None
+        action = random.choice(self.valid_actions)
 
         ########### 
         ## TO DO ##
@@ -174,7 +174,7 @@ def run():
     #   display      - set to False to disable the GUI if PyGame is enabled
     #   log_metrics  - set to True to log trial and simulation results to /logs
     #   optimized    - set to True to change the default log file name
-    sim = Simulator(env)
+    sim = Simulator(env, display=True, update_delay=10, log_metrics=False, optimized=False)
     
     ##############
     # Run the simulator
