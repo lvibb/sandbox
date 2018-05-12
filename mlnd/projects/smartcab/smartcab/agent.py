@@ -56,8 +56,8 @@ class LearningAgent(Agent):
             #self.epsilon *= self.alpha
             
             #Final Decaying function
-            #self.epsilon = math.exp(-(self.alpha*self.t))
-            self.epsilon = math.fabs(math.cos(self.alpha*self.t))
+            self.epsilon = math.exp(-(self.alpha*self.t))
+            #self.epsilon = math.fabs(math.cos(self.alpha*self.t))
 
         return None
 
