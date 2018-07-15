@@ -21,7 +21,7 @@ def scale_range(x, input_range, target_range):
 def train_test_split_linear_regression(commodity):
     """
         Split the data set into training and testing feature for Linear Regression Model
-        :param stocks: whole data set containing ['Buyer','Seller'] features
+        :param stocks: whole data set containing ['Open','Close'] features
         :return: X_train : training sets of feature
         :return: X_test : test sets of feature
         :return: y_train: training sets of label
@@ -61,10 +61,10 @@ def train_test_split_linear_regression(commodity):
     return X_train, X_test, y_train, y_test, label_range
 
 
-def train_test_split_lstm(commodity, prediction_time=1, test_data_size=450, unroll_length=50):
+def train_test_split_lstm(commodity, prediction_time=1, test_data_size=1650, unroll_length=50):
     """
         Split the data set into training and testing feature for Long Short Term Memory Model
-        :param stocks: whole data set containing ['Open','Close','Volume'] features
+        :param stocks: whole data set containing ['Open','Close'] features
         :param prediction_time: no of days
         :param test_data_size: size of test data to be used
         :param unroll_length: how long a window should be used for train test split
